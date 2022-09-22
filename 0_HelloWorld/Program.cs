@@ -26,13 +26,13 @@ Console.WriteLine();
 
 TypeWriter("Do you light the lighter?\n");
 
-string answer = Console.ReadLine();
+string? answer = Console.ReadLine();
 
 if (answer == "no")
 {
     //Console.ReadLine();
     Console.WriteLine();
-    TypeWriter("You do not light the lighter and choice to sit in the dark not doing anything \nbut you have the feeling that you won't be waiting for long\n");
+    TypeWriter("You do not light the lighter and choice to sit in the dark not doing anything. \nbut you have the feeling that you won't be waiting for long.\n");
     TypeWriter("'Coward' ending");
     Console.ReadKey();
 }
@@ -118,20 +118,20 @@ Console.ForegroundColor = ConsoleColor.DarkRed;
 TypeWriter("Numbers... What do the number mean.\n");
 TypeWriter("Remember... remember the numbers.\n");
 
-{static void Main(string[] args)
-{
+
     Random NumberGen = new Random();
 
     int roll = 0;
     int attempts = 0;
 
-while(roll !=4) {
+while(roll != 1 && attempts < 5) {
     roll = NumberGen.Next(1,9);
     Console.WriteLine(roll);
     attempts++;
 }
-}
-}
+
+
+Console.ForegroundColor = ConsoleColor.DarkGreen;
 Console.WriteLine("");
 TypeWriter("Not wanting to found out the source of the mumblings you move past the room.\n");
 TypeWriter("You finally get to the room at the other side of the hospital.\n");
@@ -144,11 +144,11 @@ Console.Clear();
 TypeWriter("You enter the room.\n");
 TypeWriter("It looks like a mess, with a lot of brokens things lying around.\n");
 TypeWriter("But with your lighter, you see something lying up against the wall.\n");
-TypeWriter("It's the body of the guy the doctor was talking about");
-TypeWriter("But more importantly you see some ammo lying beside him");
+TypeWriter("It's the body of the guy the doctor was talking about.\n");
+TypeWriter("But more importantly you see some ammo lying beside him.\n");
 
 {
-    static void Main(string[] args)
+
     {
         Ammo();
 
@@ -161,20 +161,30 @@ TypeWriter("But more importantly you see some ammo lying beside him");
 
         int amount = numberGen.Next(2, 5);
 
-        Console.WriteLine("You count them all and there is a total of" + amount + "magazines worth of ammo");
+        Console.WriteLine("You count them all and there is a total of " + amount + " magazines worth of ammo.\n");
     }
 }
 
 TypeWriter("You take all the ammo and go out of the room.\n");
+
 #endregion
 
 #region 
 //ThePatient
-
+TypeWriter("You go outside to the hallway again\n");
+TypeWriter("But before you continue, you notice that the door containing the voice is wide open.\n");
+TypeWriter("And before you notice you hear the voice again.\n");
+Console.ForegroundColor = ConsoleColor.DarkRed;
+TypeWriter("Numbers... more numbers... give me numbers.\n");
+Console.ForegroundColor = ConsoleColor.DarkGreen;
+TypeWriter("It's a patient and he is blocking your path.\n");
+TypeWriter("But you come up with a distraction.\n");
 {
-    static void Main(string[] args)
+    
     {
         string[] numbers = new string[4];
+
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
 
         Console.WriteLine("Type in four numbers: ");
 
@@ -186,5 +196,35 @@ TypeWriter("You take all the ammo and go out of the room.\n");
         Console.ReadKey();
     }
 }
+Console.ForegroundColor = ConsoleColor.DarkGreen;
+TypeWriter("You give the patient four numbers.\n");
+TypeWriter("The patient mumbles something and walks back in to the room.\n");
+TypeWriter("You move on forward.\n");
 
+Console.Clear();
+#endregion
+
+#region 
+//THEEND
+TypeWriter("You return back to the gate with the Doctor standing behind waiting.\n");
+Console.ForegroundColor = ConsoleColor.White;
+TypeWriter("You have returned, do you have what i need.\n");
+Console.ForegroundColor = ConsoleColor.DarkGreen;
+TypeWriter("'You show him the ammo.'\n");
+Console.ForegroundColor = ConsoleColor.White;
+TypeWriter("Good, good give it to me now!\n");
+Console.ForegroundColor = ConsoleColor.DarkGreen;
+TypeWriter("'You hand over the ammo'\n");
+Console.ForegroundColor = ConsoleColor.White;
+TypeWriter("Thank you, for trusting me.\n");
+TypeWriter("A deal is a deal, here take this.\n");
+Console.ForegroundColor = ConsoleColor.DarkGreen;
+TypeWriter("The Doctor throughs a small item on the ground.\n");
+TypeWriter("It's a key, with a tag that says 'emergency exit' on it.\n");
+TypeWriter("You take the key, and when you look up the Doctor has already left.\n");
+TypeWriter("Not wanting to spent anymore time in the hospital you head for the emergency exit.\n");
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("'Good' ending");
+Console.ReadLine();
 #endregion
